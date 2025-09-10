@@ -1,42 +1,4 @@
 
-// enum MessageSender { user, bot }
-
-// class Message {
-//   final String id;
-//   final String text;
-//   final MessageSender sender;
-//   final DateTime createdAt;
-
-//   /// Constructor
-//   Message({
-//     required this.id,
-//     required this.text,
-//     required this.sender,
-//     DateTime? createdAt,
-//   }) : createdAt = createdAt ?? DateTime.now();
-
-//   /// Convert object → JSON (for Firebase)
-//   Map<String, dynamic> toJson() => {
-//         'id': id,
-//         'text': text,
-//         'sender': sender == MessageSender.user ? 'user' : 'bot',
-//         'createdAt': createdAt.toIso8601String(),
-//       };
-
-//   /// Convert JSON → object (when reading from Firebase)
-//   factory Message.fromJson(Map<String, dynamic> json) {
-//     return Message(
-//       id: json['id'] as String,
-//       text: json['text'] as String,
-//       sender: json['sender'] == 'user'
-//           ? MessageSender.user
-//           : MessageSender.bot,
-//       createdAt: DateTime.parse(json['createdAt'] as String),
-//     );
-//   }
-// }
-
-
 // lib/models/message.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 
